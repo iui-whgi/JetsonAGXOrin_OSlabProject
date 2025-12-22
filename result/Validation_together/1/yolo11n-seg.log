@@ -1,0 +1,25 @@
+
+================================================================================
+[yolo11n-seg] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-seg.engine
+  Dataset: COCO 2017 Val (coco2017_val)
+  Task: segment
+================================================================================
+
+이미지 파일 수집: 100개 (최대 100개로 제한)
+이미지 파일: 100개
+Ground-truth 객체: 36781개
+Ground-truth가 있는 이미지: 4952개
+Warm-up 실행 중...
+Warm-up 완료
+
+추론 시간 측정 및 정확도 계산 중...
+공식 지표 계산 중 (YOLO val() 메서드)...
+⚠️  val() 메서드 실행 중 에러: 'NoneType' object has no attribute 'get'
+전체 추론 시간: 4.641초
+이미지 수: 100
+평균 이미지당 시간: 46.415ms
+탐지된 객체: 538개
+True Positive: 504개
+False Positive: 34개
+False Negative: 210개

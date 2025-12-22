@@ -115,7 +115,7 @@ cd /mnt/sd
 docker run -d --name alone --runtime=nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_alone/alone_sequence_improved.py"
 
 
-
+docker rm -f $(docker ps -aq)
 # InferenceTime_together_improved : 컨테이너 5개(MPS) 기동 후 start/1 생성 시 동시 시작
 docker run -d --name cls --runtime nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_cls_improved.py"
 docker run -d --name detect --runtime nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_detect_improved.py"
@@ -123,7 +123,7 @@ docker run -d --name pose --runtime nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e
 docker run -d --name seg --runtime nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_seg_improved.py"
 docker run -d --name obb --runtime nvidia -v /tmp/nvidia-mps:/tmp/nvidia-mps -e CUDA_MPS_PIPE_DIRECTORY=/tmp/nvidia-mps -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_obb_improved.py"
 
-
+docker rm -f $(docker ps -aq)
 # InferenceTime_together_improved (MPS 없이) : 컨테이너 5개 기동 후 start/1 생성 시 동시 시작
 docker run -d --name cls --runtime nvidia -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_cls_improved.py"
 docker run -d --name detect --runtime nvidia -v /home/gpu-agx/zoo:/ultralytics/zoo ultralytics/ultralytics:latest-jetson-jetpack6 /bin/bash -c "python /ultralytics/zoo/script/InferenceTime_together/run_detect_improved.py"

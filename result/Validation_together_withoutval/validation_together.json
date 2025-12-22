@@ -1,0 +1,92 @@
+[
+  {
+    "model": "yolo11n-pose",
+    "task": "pose",
+    "dataset": "coco2017_val",
+    "total_time": 4.104642470998442,
+    "num_images": 100,
+    "avg_time_per_image_ms": 41.04642470998442,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "ImageNet1k_100",
+    "total_time": 1.1377055060002021,
+    "num_images": 100,
+    "avg_time_per_image_ms": 11.377055060002021,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-detect",
+    "task": "detect",
+    "dataset": "coco2017_val",
+    "total_time": 6.157100595999509,
+    "num_images": 100,
+    "avg_time_per_image_ms": 61.57100595999509,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-seg",
+    "task": "segment",
+    "dataset": "coco2017_val",
+    "total_time": 6.285357583999939,
+    "num_images": 100,
+    "avg_time_per_image_ms": 62.8535758399994,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-obb",
+    "task": "obb",
+    "dataset": "DOTAv1.5-1024_val",
+    "total_time": 6.223919830999876,
+    "num_images": 100,
+    "avg_time_per_image_ms": 62.239198309998756,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-detect",
+    "task": "detect",
+    "dataset": "coco2017_val",
+    "total_time": 5.0291267890061135,
+    "num_images": 100,
+    "avg_time_per_image_ms": 50.291267890061135,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-pose",
+    "task": "pose",
+    "dataset": "coco2017_val",
+    "total_time": 3.9397563230013475,
+    "num_images": 100,
+    "avg_time_per_image_ms": 39.397563230013475,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "ImageNet1k_100",
+    "total_time": 1.1513781890025712,
+    "num_images": 100,
+    "avg_time_per_image_ms": 11.513781890025712,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-seg",
+    "task": "segment",
+    "dataset": "coco2017_val",
+    "total_time": 4.887907055999676,
+    "num_images": 100,
+    "avg_time_per_image_ms": 48.87907055999676,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-obb",
+    "task": "obb",
+    "dataset": "DOTAv1.5-1024_val",
+    "total_time": 5.906583139003487,
+    "num_images": 100,
+    "avg_time_per_image_ms": 59.06583139003487,
+    "metrics": {}
+  }
+]

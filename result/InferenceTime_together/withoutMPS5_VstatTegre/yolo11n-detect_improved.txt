@@ -1,0 +1,1 @@
+yolo11n-detect: 58.553 ms (n=100)

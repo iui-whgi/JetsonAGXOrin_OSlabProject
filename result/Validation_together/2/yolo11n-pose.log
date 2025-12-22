@@ -1,0 +1,25 @@
+
+================================================================================
+[yolo11n-pose] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-pose.engine
+  Dataset: COCO 2017 Val (coco2017_val)
+  Task: pose
+================================================================================
+
+이미지 파일 수집: 100개 (최대 100개로 제한)
+이미지 파일: 100개
+Ground-truth 객체: 11004개
+Ground-truth가 있는 이미지: 2693개
+Warm-up 실행 중...
+Warm-up 완료
+
+추론 시간 측정 및 정확도 계산 중...
+공식 지표 계산 중 (YOLO val() 메서드)...
+⚠️  val() 메서드 실행 중 에러: 'kpt_shape'
+전체 추론 시간: 3.287초
+이미지 수: 100
+평균 이미지당 시간: 32.866ms
+탐지된 객체: 214개
+True Positive: 189개
+False Positive: 25개
+False Negative: 98개
