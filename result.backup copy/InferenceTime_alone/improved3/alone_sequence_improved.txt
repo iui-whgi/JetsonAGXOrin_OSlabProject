@@ -1,5 +1,0 @@
-yolo11n-cls: 8.323 ms (n=100)
-yolo11n-detect: 26.590 ms (n=100)
-yolo11n-pose: 25.936 ms (n=100)
-yolo11n-seg: 33.087 ms (n=100)
-yolo11n-obb: 26.186 ms (n=100)
