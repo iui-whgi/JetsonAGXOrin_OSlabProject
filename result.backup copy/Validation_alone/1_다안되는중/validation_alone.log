@@ -1,0 +1,147 @@
+================================================================================
+Validation 시작
+결과 저장 경로: /ultralytics/zoo/result/Validation_alone
+⚠️  중요: 각 engine은 순차적으로 실행됩니다 (병렬 실행 없음)
+================================================================================
+
+
+================================================================================
+[yolo11n-cls] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-cls.engine
+  Dataset: /ultralytics/zoo/dataset/CIFAR100
+  Task: classify
+  Image Size: 224
+================================================================================
+
+Warm-up 실행 중...
+Warm-up 완료
+
+추론 시간 측정 중...
+전체 추론 시간: 0.754초
+이미지 수: 3
+평균 이미지당 시간: 251.497ms
+
+Validation 메트릭:
+  Top-1 Accuracy: 0.0000
+  Top-5 Accuracy: 0.0000
+
+
+================================================================================
+[yolo11n-detect] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-detect.engine
+  Dataset: /ultralytics/zoo/dataset/coco128
+  Task: detect
+  Image Size: 640
+================================================================================
+
+Warm-up 실행 중...
+[yolo11n-detect] 오류 발생: 'NoneType' object has no attribute 'get'
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 325, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 198, in validate_model
+    _ = model.val(
+  File "/ultralytics/ultralytics/engine/model.py", line 611, in val
+    validator(model=self.model)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ultralytics/ultralytics/engine/validator.py", line 171, in __call__
+    self.args.batch = model.metadata.get("batch", 1)  # export.py models default to batch-size 1
+AttributeError: 'NoneType' object has no attribute 'get'
+
+
+
+================================================================================
+[yolo11n-pose] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-pose.engine
+  Dataset: /ultralytics/zoo/dataset/coco128
+  Task: pose
+  Image Size: 640
+================================================================================
+
+Warm-up 실행 중...
+[yolo11n-pose] 오류 발생: Dataset '/ultralytics/zoo/dataset/coco128' for task=pose not found ❌
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 325, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 198, in validate_model
+    _ = model.val(
+  File "/ultralytics/ultralytics/engine/model.py", line 611, in val
+    validator(model=self.model)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ultralytics/ultralytics/engine/validator.py", line 179, in __call__
+    raise FileNotFoundError(emojis(f"Dataset '{self.args.data}' for task={self.args.task} not found ❌"))
+FileNotFoundError: Dataset '/ultralytics/zoo/dataset/coco128' for task=pose not found ❌
+
+
+
+================================================================================
+[yolo11n-seg] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-seg.engine
+  Dataset: /ultralytics/zoo/dataset/coco128
+  Task: segment
+  Image Size: 640
+================================================================================
+
+Warm-up 실행 중...
+[yolo11n-seg] 오류 발생: 'NoneType' object has no attribute 'get'
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 325, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 198, in validate_model
+    _ = model.val(
+  File "/ultralytics/ultralytics/engine/model.py", line 611, in val
+    validator(model=self.model)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ultralytics/ultralytics/engine/validator.py", line 171, in __call__
+    self.args.batch = model.metadata.get("batch", 1)  # export.py models default to batch-size 1
+AttributeError: 'NoneType' object has no attribute 'get'
+
+
+
+================================================================================
+[yolo11n-obb] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-obb.engine
+  Dataset: /ultralytics/zoo/dataset/DOTA100/temp_dota100.yaml
+  Task: obb
+  Image Size: 640
+================================================================================
+
+Warm-up 실행 중...
+[yolo11n-obb] 오류 발생: No valid images found in /ultralytics/zoo/dataset/DOTA100/labels/val.cache. Images with incorrectly formatted labels are ignored. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 325, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 198, in validate_model
+    _ = model.val(
+  File "/ultralytics/ultralytics/engine/model.py", line 611, in val
+    validator(model=self.model)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ultralytics/ultralytics/engine/validator.py", line 186, in __call__
+    self.dataloader = self.dataloader or self.get_dataloader(self.data.get(self.args.split), self.args.batch)
+  File "/ultralytics/ultralytics/models/yolo/detect/val.py", line 313, in get_dataloader
+    dataset = self.build_dataset(dataset_path, batch=batch_size, mode="val")
+  File "/ultralytics/ultralytics/models/yolo/detect/val.py", line 301, in build_dataset
+    return build_yolo_dataset(self.args, img_path, batch, self.data, mode=mode, stride=self.stride)
+  File "/ultralytics/ultralytics/data/build.py", line 236, in build_yolo_dataset
+    return dataset(
+  File "/ultralytics/ultralytics/data/dataset.py", line 88, in __init__
+    super().__init__(*args, channels=self.data.get("channels", 3), **kwargs)
+  File "/ultralytics/ultralytics/data/base.py", line 116, in __init__
+    self.labels = self.get_labels()
+  File "/ultralytics/ultralytics/data/dataset.py", line 186, in get_labels
+    raise RuntimeError(
+RuntimeError: No valid images found in /ultralytics/zoo/dataset/DOTA100/labels/val.cache. Images with incorrectly formatted labels are ignored. See https://docs.ultralytics.com/datasets for dataset formatting guidance.
+
+
+
+================================================================================
+Validation 완료
+================================================================================

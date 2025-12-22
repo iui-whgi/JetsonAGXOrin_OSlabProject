@@ -1,0 +1,22 @@
+
+================================================================================
+[yolo11n-cls]
+  Dataset: ImageNet1k_100
+  Task: classify
+  전체 시간: 1.272초
+  이미지 수: 100
+  평균 시간: 12.723ms
+  메트릭:
+  Top-1 Accuracy: 0.7400
+  Top-5 Accuracy: 0.9300
+[yolo11n-detect] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+[yolo11n-pose] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+[yolo11n-seg] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+================================================================================
+[yolo11n-obb]
+  Dataset: DOTA100
+  Task: obb
+  전체 시간: 2.932초
+  이미지 수: 100
+  평균 시간: 29.318ms

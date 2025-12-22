@@ -1,0 +1,112 @@
+================================================================================
+Validation 시작
+결과 저장 경로: /ultralytics/zoo/result/Validation_alone
+⚠️  중요: 각 engine은 순차적으로 실행됩니다 (병렬 실행 없음)
+================================================================================
+
+
+================================================================================
+[yolo11n-cls] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-cls.engine
+  Dataset: /ultralytics/zoo/dataset/ImageNet1k_100
+  Note: ImageNet 1000개 클래스 validation 100개 이미지
+================================================================================
+
+검증 이미지: 100개
+Ground truth 로드 완료: 100개 (CSV 파일 사용)
+Ground truth 매핑: 100개
+Warm-up 실행 중...
+Warm-up 완료
+
+추론 시간 측정 및 정확도 계산 중...
+전체 추론 시간: 1.272초
+이미지 수: 100
+평균 이미지당 시간: 12.723ms
+정확도 계산 대상: 100개
+Top-1 정확도: 74/100 = 0.7400
+Top-5 정확도: 93/100 = 0.9300
+
+
+================================================================================
+[yolo11n-detect] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-detect.engine
+  Dataset: COCO (coco128)
+  Task: detect
+================================================================================
+
+[yolo11n-detect] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 555, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 530, in validate_model
+    return validate_detect_seg_pose(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 279, in validate_detect_seg_pose
+    raise FileNotFoundError(f"COCO annotation file not found: {COCO_ANNOTATION_FILE}")
+FileNotFoundError: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+
+
+================================================================================
+[yolo11n-pose] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-pose.engine
+  Dataset: COCO (coco128)
+  Task: pose
+================================================================================
+
+[yolo11n-pose] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 555, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 530, in validate_model
+    return validate_detect_seg_pose(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 279, in validate_detect_seg_pose
+    raise FileNotFoundError(f"COCO annotation file not found: {COCO_ANNOTATION_FILE}")
+FileNotFoundError: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+
+
+================================================================================
+[yolo11n-seg] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-seg.engine
+  Dataset: COCO (coco128)
+  Task: segment
+================================================================================
+
+[yolo11n-seg] 오류 발생: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+Traceback (most recent call last):
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 555, in main
+    summary = validate_model(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 530, in validate_model
+    return validate_detect_seg_pose(spec, log_lines)
+  File "/ultralytics/zoo/script/Validation_alone/validation_alone.py", line 279, in validate_detect_seg_pose
+    raise FileNotFoundError(f"COCO annotation file not found: {COCO_ANNOTATION_FILE}")
+FileNotFoundError: COCO annotation file not found: /ultralytics/zoo/dataset/coco128/instances_val100.json
+
+
+
+================================================================================
+[yolo11n-obb] Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-obb.engine
+  Dataset: DOTA100
+  Images: /ultralytics/zoo/dataset/DOTA100/images/val
+================================================================================
+
+검증 이미지: 100개 (val: 20개, train 사용: 80개)
+Ground-truth OBB: 35개
+Warm-up 실행 중...
+Warm-up 완료
+
+추론 시간 측정 중...
+전체 추론 시간: 2.932초
+이미지 수: 100
+평균 이미지당 시간: 29.318ms
+탐지된 OBB: 62개
+이미지당 평균: 0.62개
+
+
+================================================================================
+Validation 완료
+================================================================================

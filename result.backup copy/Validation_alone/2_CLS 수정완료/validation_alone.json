@@ -1,0 +1,14 @@
+[
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "ImageNet1k_100",
+    "total_time": 1.2381288259639405,
+    "num_images": 100,
+    "avg_time_per_image_ms": 12.381288259639405,
+    "metrics": {
+      "top1": 0.74,
+      "top5": 0.93
+    }
+  }
+]

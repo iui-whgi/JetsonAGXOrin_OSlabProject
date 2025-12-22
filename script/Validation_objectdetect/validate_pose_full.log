@@ -1,0 +1,30 @@
+================================================================================
+YOLO11n-Pose Validation 시작
+결과 저장 경로: /ultralytics/zoo/script/Validation_objectdetect
+================================================================================
+
+
+================================================================================
+YOLO11n-Pose Validation 시작
+  Model: /ultralytics/zoo/model/yolo11n-pose.engine
+  Dataset: COCO 2017 Val (coco2017_val)
+  Task: pose
+================================================================================
+
+Pose 형식 labels 사용: /ultralytics/zoo/dataset/coco2017_val/labels/person_keypoints_val2017
+  총 2693개 파일
+이미지 파일 수집: 164개 (Pose labels와 매칭되는 파일만)
+Warm-up 실행 중...
+Warm-up 완료
+
+공식 지표 계산 중 (YOLO val() 메서드)...
+심볼릭 링크 생성: /ultralytics/zoo/dataset/coco2017_val/labels/val2017 -> /ultralytics/zoo/dataset/coco2017_val/labels/person_keypoints_val2017
+공식 지표 계산 완료: OKS mAP@[0.5:0.95] = 0.0000
+이미지 수: 164
+Label 파일 수: 2693
+[공식 지표] OKS mAP@[0.5:0.95]: 0.0000
+
+
+================================================================================
+Validation 완료
+================================================================================

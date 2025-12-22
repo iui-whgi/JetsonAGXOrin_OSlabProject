@@ -1,0 +1,17 @@
+[
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "CIFAR100",
+    "total_time": 0.7544897010084242,
+    "num_images": 3,
+    "avg_time_per_image_ms": 251.49656700280804,
+    "metrics": {
+      "metrics/accuracy_top1": 0.0,
+      "metrics/accuracy_top5": 0.0,
+      "fitness": 0.0,
+      "top1": 0.0,
+      "top5": 0.0
+    }
+  }
+]
