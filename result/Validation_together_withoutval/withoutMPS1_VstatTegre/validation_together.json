@@ -1,0 +1,47 @@
+[
+  {
+    "model": "yolo11n-pose",
+    "task": "pose",
+    "dataset": "coco2017_val",
+    "total_time": 4.444568632003211,
+    "num_images": 100,
+    "avg_time_per_image_ms": 44.44568632003211,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "ImageNet1k_100",
+    "total_time": 1.1168146549971425,
+    "num_images": 100,
+    "avg_time_per_image_ms": 11.168146549971425,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-obb",
+    "task": "obb",
+    "dataset": "DOTAv1.5-1024_val",
+    "total_time": 6.38066936499672,
+    "num_images": 100,
+    "avg_time_per_image_ms": 63.8066936499672,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-seg",
+    "task": "segment",
+    "dataset": "coco2017_val",
+    "total_time": 6.396145382001123,
+    "num_images": 100,
+    "avg_time_per_image_ms": 63.96145382001123,
+    "metrics": {}
+  },
+  {
+    "model": "yolo11n-detect",
+    "task": "detect",
+    "dataset": "coco2017_val",
+    "total_time": 6.40887835000467,
+    "num_images": 100,
+    "avg_time_per_image_ms": 64.0887835000467,
+    "metrics": {}
+  }
+]

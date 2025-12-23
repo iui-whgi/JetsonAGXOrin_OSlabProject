@@ -1,0 +1,67 @@
+[
+  {
+    "model": "yolo11n-cls",
+    "task": "classify",
+    "dataset": "ImageNet1k_100",
+    "total_time": 1.562956846995803,
+    "num_images": 100,
+    "avg_time_per_image_ms": 15.62956846995803,
+    "metrics": {
+      "top1": 0.74,
+      "top5": 0.93,
+      "official_top1": 0.74,
+      "official_top5": 0.93
+    }
+  },
+  {
+    "model": "yolo11n-pose",
+    "task": "pose",
+    "dataset": "coco2017_val",
+    "total_time": 3.2045681419986067,
+    "num_images": 100,
+    "avg_time_per_image_ms": 32.04568141998607,
+    "metrics": {
+      "precision": 0.883177570093458,
+      "recall": 0.6585365853658537,
+      "f1": 0.7544910179640718
+    }
+  },
+  {
+    "model": "yolo11n-obb",
+    "task": "obb",
+    "dataset": "DOTAv1.5-1024_val",
+    "total_time": 6.18292386399844,
+    "num_images": 100,
+    "avg_time_per_image_ms": 61.829238639984396,
+    "metrics": {
+      "total_detections": 1431,
+      "avg_detections_per_image": 14.31
+    }
+  },
+  {
+    "model": "yolo11n-detect",
+    "task": "detect",
+    "dataset": "coco2017_val",
+    "total_time": 5.028923882004165,
+    "num_images": 100,
+    "avg_time_per_image_ms": 50.289238820041646,
+    "metrics": {
+      "precision": 0.8991304347826087,
+      "recall": 0.7240896358543417,
+      "f1": 0.8021722265321956
+    }
+  },
+  {
+    "model": "yolo11n-seg",
+    "task": "segment",
+    "dataset": "coco2017_val",
+    "total_time": 4.964889483999286,
+    "num_images": 100,
+    "avg_time_per_image_ms": 49.64889483999286,
+    "metrics": {
+      "precision": 0.9368029739776952,
+      "recall": 0.7058823529411765,
+      "f1": 0.805111821086262
+    }
+  }
+]
